@@ -75,8 +75,34 @@ header > .container {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  padding-bottom: 32px;
   text-decoration: none;
   justify-content: space-between;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  
+}
+
+.navigation-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196F3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.navigation-link:hover::after {
+opacity: 1;
 }
 
 .navigation-link-item {
@@ -111,6 +137,9 @@ header > .container {
   margin-left: 10px;
   display: flex;
   align-items: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover ,
@@ -265,6 +294,28 @@ margin-right: auto;
 .activity-item:last-child {
   margin-right: 0;
 }
+.activity-link {
+  position: relative;
+}
+
+.activity-description {
+font-family: Roboto;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+background-color:rgba(47, 48, 58, 0.8);
+margin: 0;
+padding-top: 27px;
+padding-bottom: 27px;
+width: 370px;
+position: absolute;
+left: 0;
+bottom: 0;
+}
 
 .team-title {
   font-weight: 700;
@@ -354,6 +405,9 @@ margin-right: auto;
   margin-left: 10px;
   background-color: #FFFFFF;
   fill: #AFB1B8;
+  transition-property: background-color ,fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network-link:hover,
@@ -398,6 +452,9 @@ margin-right: auto;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   margin-right: 30px;
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:last-child {
@@ -461,6 +518,9 @@ align-items: baseline;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bottom-contact-item:first-child {
@@ -504,6 +564,9 @@ align-items: baseline;
   border-radius: 50%;
   background-color: #44454E;
   fill: #ffffff;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bottom-social-network-link-item {
@@ -558,6 +621,9 @@ margin-right: 10px;
   background: #f5f4fa;
   border-radius: 4px;
   border-width: 0;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .secondary-button:hover,
