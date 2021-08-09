@@ -646,6 +646,7 @@ margin-right: 10px;
   max-width: 100%;
 }
 
+
 .work-example-item {
   background: #ffffff;
   border: 1px solid #eeeeee;
@@ -665,10 +666,61 @@ margin-right: 10px;
   margin-right: 0;
 }
 
+.work-example-thumb {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  overflow: hidden;
+}
+
+.work-example-thumb::before{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.work-example-description {
+font-family: Roboto;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0.03em;
+padding-top: 63px;
+padding-bottom: 63px;
+padding-left: 24px;
+padding-right: 24px;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: #FFFFFF;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 .work-example-item:hover,
 .work-example-item:focus {
   border: 1px solid #EEEEEE;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.work-example-thumb:hover::before,
+.work-example-thumb:hover::before  {
+transform: translateY(0);
+}
+
+
+.work-example-thumb:hover .work-example-description {
+  transform: translate(-50%, -50%)
 }
 
 .work-example-name {
