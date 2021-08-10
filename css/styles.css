@@ -220,6 +220,7 @@ pointer-events: none;
 
 .backdrop.is-hidden.modal {
 transform: translate(-50%, -50%) scale(0.5);
+opacity: 0;
 }
 
 .modal {
@@ -227,10 +228,11 @@ transform: translate(-50%, -50%) scale(0.5);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
   min-width: 528px;
   min-height: 581px;
   background-color: #FFFFFF;
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }  
