@@ -70,6 +70,7 @@ header > .container {
 }
 
 .navigation-link {
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -81,16 +82,10 @@ header > .container {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  
 }
 
 .navigation-link::after {
   content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196F3;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -98,7 +93,10 @@ header > .container {
   transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #2196F3;
 }
 
 .navigation-link:hover::after {
@@ -201,6 +199,54 @@ margin-right: auto;
   margin: auto;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+.backdrop.is-hidden {
+opacity: 0;
+pointer-events: none;
+}
+
+.backdrop.is-hidden.modal {
+transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #FFFFFF;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}  
+
+.modal-closing-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  padding: auto;
+  margin-right: 8px;
+  margin-top: 8px;
+  text-align: center;
+}
 
 .advantage-section {
   padding-top: 94px;
@@ -299,6 +345,9 @@ margin-right: auto;
 }
 
 .activity-description {
+position: absolute;
+left: 0;
+bottom: 0;
 font-family: Roboto;
 font-weight: bold;
 font-size: 14px;
@@ -312,9 +361,6 @@ margin: 0;
 padding-top: 27px;
 padding-bottom: 27px;
 width: 370px;
-position: absolute;
-left: 0;
-bottom: 0;
 }
 
 .team-title {
@@ -386,7 +432,7 @@ bottom: 0;
 }
 
 .social-network-list{
-  list-style-type: none;
+ list-style-type: none;
  display: flex;
  justify-content: space-between;
  padding-left: 32px;
@@ -686,6 +732,10 @@ margin-right: 10px;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .work-example-description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 font-family: Roboto;
 font-size: 18px;
 line-height: 28px;
@@ -696,10 +746,6 @@ padding-left: 24px;
 padding-right: 24px;
   width: 100%;
   margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
   color: #FFFFFF;
   transition-property: transform;
   transition-duration: 250ms;
