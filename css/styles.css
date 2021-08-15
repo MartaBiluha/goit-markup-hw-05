@@ -67,6 +67,7 @@ header > .container {
   margin: 0;
   justify-content: space-between;
   padding-left: 0px;
+  margin-left: 93px;
 }
 
 .navigation-link {
@@ -109,7 +110,7 @@ opacity: 1;
 }
 
 .navigation-link-item:first-child {
-  padding-left: 93px;
+  margin-left: 0
 }
 
 .navigation-link:hover,
