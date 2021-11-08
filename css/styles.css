@@ -749,6 +749,7 @@ margin-right: 10px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .work-example-description {
   position: absolute;
   top: 50%;
