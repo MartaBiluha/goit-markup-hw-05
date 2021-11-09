@@ -120,6 +120,22 @@ header > .container {
 opacity: 1;
 }
 
+.studio::after {
+  opacity: 1;
+}
+
+.studio {
+  color: #2196f3;
+}
+
+.portfolio-nav::after {
+  opacity: 1;
+}
+
+.portfolio-nav{
+  color: #2196f3;
+}
+
 .navigation-link-item {
   margin-left: 50px;
 }
@@ -446,7 +462,7 @@ justify-content: center;
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 
 .social-network-list{
@@ -455,7 +471,7 @@ justify-content: center;
  justify-content: space-between;
  padding-left: 32px;
  padding-right: 32px;
- padding-bottom: 30px;
+ padding-bottom: 0;
  align-items: center;
 }
 
